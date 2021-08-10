@@ -9,7 +9,7 @@ def _update_type_docs(overall):
     defs = overall['type_docs']
 
     type_docs = []
-    for (k,v) in sorted(defs.items(), key=lambda x: x[0]):
+    for (k, v) in sorted(defs.items(), key=lambda x: x[0]):
         type_docs.append(f'| _{k}_ | {v} |')
 
     desc_str = "\n".join(type_docs)
@@ -25,7 +25,7 @@ def _update_term_definitions(overall):
     defs = overall['term_definitions']
 
     term_descriptions = []
-    for (k,v) in sorted(defs.items(), key=lambda x: x[0]):
+    for (k, v) in sorted(defs.items(), key=lambda x: x[0]):
         term_descriptions.append(f'| _{k}_ | {v} |')
 
     desc_str = "\n".join(term_descriptions)
@@ -39,16 +39,16 @@ def _update_term_definitions(overall):
 
 def _update_response_flags(overall):
     flags = overall['response_flags']['bits']
-    for n in range(0,8):
+    for n in range(0, 8):
         if str(n) not in flags:
-            flags[str(n)] = { "name": "-", "description": "-" }
+            flags[str(n)] = {"name": "-", "description": "-"}
 
-    header = '| ' + " | ".join([f'Bit {n}' for n in range(7,-1,-1)]) + ' |'
-    dividers = '|' + "|".join(['--' for n in range(7,-1,-1)]) + '|'
-    bit_names = '| ' + " | ".join([flags[str(n)]['name'] for n in range(7,-1,-1)]) + ' |'
+    header = '| ' + " | ".join([f'Bit {n}' for n in range(7, -1, -1)]) + ' |'
+    dividers = '|' + "|".join(['--' for n in range(7, -1, -1)]) + '|'
+    bit_names = '| ' + " | ".join([flags[str(n)]['name'] for n in range(7, -1, -1)]) + ' |'
 
     bit_descriptions = ''
-    for n in range(7,-1,-1):
+    for n in range(7, -1, -1):
         bit_desc = flags[str(n)]
         if bit_desc['name'] != '-':
             desc = bit_desc['description']

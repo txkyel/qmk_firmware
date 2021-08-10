@@ -38,7 +38,6 @@ LED_INDICATORS = {
 BUILD_DIR = environ.get('BUILD_DIR', '.build')
 KEYBOARD_OUTPUT_PREFIX = f'{BUILD_DIR}/obj_'
 
-
 # Headers for generated files
 this_year = date.today().year
 GPL2_HEADER_C_LIKE = f'''\

@@ -32,7 +32,7 @@ def _merge_ordered_dicts(dicts):
             target[k] = v
 
     for d in dicts:
-        for (k,v) in d.items():
+        for (k, v) in d.items():
             add_entry(result, k, v)
 
     return result

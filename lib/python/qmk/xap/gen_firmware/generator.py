@@ -54,7 +54,9 @@ def _append_routing_table(lines, route, name_stack=[]):
         if child['type'] == 'router':
 
             # If we're a router, we need to offload to the child table
-            lines.append(f'    [{name_stack_str}] = {{ .flags = {{ .type = XAP_ROUTE, .is_secure = {is_secure} }}, .child_routes = {name_stack_str.lower()}_routes, .child_routes_len = sizeof({name_stack_str.lower()}_routes)/sizeof({name_stack_str.lower()}_routes[0]) }},')
+            lines.append(
+                f'    [{name_stack_str}] = {{ .flags = {{ .type = XAP_ROUTE, .is_secure = {is_secure} }}, .child_routes = {name_stack_str.lower()}_routes, .child_routes_len = sizeof({name_stack_str.lower()}_routes)/sizeof({name_stack_str.lower()}_routes[0]) }},'
+            )
 
         elif child['type'] == 'command':
 
@@ -166,7 +168,7 @@ def generate_header(output_file):
     """
     xap_defs = latest_xap_defs()
 
-    lines = [GPL2_HEADER_C_LIKE, GENERATED_HEADER_C_LIKE, '#pragma once','']
+    lines = [GPL2_HEADER_C_LIKE, GENERATED_HEADER_C_LIKE, '#pragma once', '']
 
     prog = re.compile(r'^(\d+)\.(\d+)\.(\d+)')
     b = prog.match(xap_defs['version'])
