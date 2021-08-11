@@ -4,11 +4,11 @@ This custom tap dance functions similarly to the single tap and hold functionali
 
 ## Motivation
 
-I first discovered tap dancing through [Ben Vallack](https://www.youtube.com/c/BenVallack) and was interested in the functionality of tap dancing demonstrated in his [tap dancing video](https://www.youtube.com/watch?v=pTMbzmf2sz8). And so I set off to implement my own tap dances emulating this functionality.
+I first discovered tap dancing through [Ben Vallack](https://www.youtube.com/c/BenVallack) and was interested in the functionality demonstrated in his [tap dancing video](https://www.youtube.com/watch?v=pTMbzmf2sz8). And so I set off to implement my own tap dances emulating this functionality.
 
 ## Custom Tap Dance Action
 
-Similar to the the action definitions in [`process_tap_dance.h`](../../quantum/process_keycode/process_tap_dance.h); I have created a custom macro and data structure used to declare tap dance actions:
+Similar to the the action definitions in [`process_tap_dance.h`](../../quantum/process_keycode/process_tap_dance.h), I have created a custom macro and data structure used to declare tap dance actions:
 
 ```c
 typedef struct {
@@ -76,10 +76,10 @@ void qk_tap_dance_tap_hold_on_reset(qk_tap_dance_state_t *state, void *user_data
 The macro `ACTION_TAP_HOLD` allows a user to select the keycode for both the tap and hold action of the tap dance. It goes without saying that you can also send keycodes with modifiers so instead of having to write out `ACTION_TAP_HOLD(kc, C(kc))` for each keycode, we can use more macros:
 
 ```c
-#define ACTION_TAP_HOLD_CTL(t) ACTION_TAP_HOLD(t, LCTL(t))
+#define ACTION_TAP_HOLD_CTL(t) ACTION_TAP_HOLD(t, C(t))
 ```
 
-Macros are rock.
+Macros rock.
 
 # The Journey to Lower Sized Tap Dancing
 
