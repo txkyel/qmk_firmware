@@ -48,9 +48,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [HC_DEL]       = ACTION_TAP_HOLD_CTL(KC_DEL),
     [HC_LEFT]      = ACTION_TAP_HOLD_CTL(KC_LEFT),
     [HC_RGHT]      = ACTION_TAP_HOLD_CTL(KC_RGHT),
-    [TH_ESC_TAB]   = ACTION_TAP_HOLD(KC_TAB, KC_ESC),
-    [TH_HOME_BSLS] = ACTION_TAP_HOLD(KC_BSLASH, KC_HOME),
-    [TH_HOME_BSLS] = ACTION_TAP_HOLD(KC_PIPE, KC_END),
-    [TH_QUOT_GRV]  = ACTION_TAP_HOLD(KC_QUOT, KC_GRV),
+    [TH_TAB_DEL]   = ACTION_TAP_HOLD(KC_TAB, KC_DEL),
 };
 #endif

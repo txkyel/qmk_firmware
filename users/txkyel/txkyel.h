@@ -50,9 +50,6 @@ enum hold_ctl_enum {
     HC_DEL,
     HC_LEFT,
     HC_RGHT,
-    TH_ESC_TAB,
-    TH_HOME_BSLS,
-    TH_END_PIPE,
-    TH_QUOT_GRV,
+    TH_TAB_DEL,
 };
 #endif
