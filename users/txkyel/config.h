@@ -18,5 +18,5 @@
 #define TAPPING_TERM 200
 
 #ifndef NO_ACTION_ONESHOT
-#    define ONESHOT_TIMEOUT 5000
+#    define ONESHOT_TIMEOUT 1000
 #endif
