@@ -19,8 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-// #define MASTER_LEFT
-#define MASTER_RIGHT
+#define MASTER_LEFT
+// #define MASTER_RIGHT
 
 #define TAPPING_FORCE_HOLD
 
@@ -40,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Rotate mouse
 #ifdef PS2_MOUSE_ENABLE
-#    define PS2_MOUSE_ROTATE 270
+#    define PS2_MOUSE_ROTATE 90
 #endif
 
 #if defined(PS2_USE_BUSYWAIT) + defined(PS2_USE_INT) > 1
