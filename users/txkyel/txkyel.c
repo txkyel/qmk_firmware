@@ -18,9 +18,10 @@
 #ifdef TAP_DANCE_ENABLE
 // Default Tap Dance definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [HC_BSPC]      = ACTION_TAP_HOLD_CTL(KC_BSPC),
-    [HC_LEFT]      = ACTION_TAP_HOLD_CTL(KC_LEFT),
-    [HC_RGHT]      = ACTION_TAP_HOLD_CTL(KC_RGHT),
-    [TH_TAB_DEL]   = ACTION_TAP_HOLD(KC_TAB, KC_DEL),
+    [HC_BSPC]  = ACTION_TAP_HOLD_CTL(KC_BSPC),
+    [HC_LEFT]  = ACTION_TAP_HOLD_CTL(KC_LEFT),
+    [HC_RGHT]  = ACTION_TAP_HOLD_CTL(KC_RGHT),
+    [HC_DEL]   = ACTION_TAP_HOLD_CTL(KC_DEL),
+    [HC_WHIT] = ACTION_TAP_HOLD(KC_SPC, KC_TAB),
 };
 #endif
