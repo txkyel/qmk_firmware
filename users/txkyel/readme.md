@@ -2,6 +2,8 @@
 
 Read up on my implementation of tap dancing journey in learning QMK thus far in [tap_dance.md](tap_dance.md).
 
+Tweaked [Callum oneshot mods](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) for testing and use with personal keymaps.
+
 ## Licensing
 
 Copyright 2021 Kyle Xiao kylexiao20@gmail.com @txkyel
