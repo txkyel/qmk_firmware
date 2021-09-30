@@ -16,8 +16,10 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
+#include "callum_oneshot.h"
+#include "tap_dance.h"
+
 #ifdef TAP_DANCE_ENABLE
-#    include "tap_dance.h"
 // Tap Dance declarations for use in keymaps
 enum hold_ctl_enum {
     HC_BSPC,
@@ -26,8 +28,4 @@ enum hold_ctl_enum {
     HC_DEL,
     HC_WHIT,
 };
-#endif
-
-#ifdef CALLUM_OS
-#    include "callum_oneshot.h"
 #endif
