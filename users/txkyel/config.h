@@ -15,8 +15,7 @@
  */
 #pragma once
 
-#define TAPPING_TERM 150
+#define TAPPING_TERM 200
+#define TAPPING_FORCE_HOLD
 
-#ifndef NO_ACTION_ONESHOT
-#    define ONESHOT_TIMEOUT 1000
-#endif
+#define ONESHOT_TIMEOUT 1000
