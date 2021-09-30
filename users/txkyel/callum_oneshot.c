@@ -51,11 +51,10 @@ static inline void _update_oneshot_no_trigger(oneshot_action_t *action, uint16_t
     }
 }
 
-bool update_oneshot(oneshot_action_t *action, uint16_t keycode, keyrecord_t *record) {
+void update_oneshot(oneshot_action_t *action, uint16_t keycode, keyrecord_t *record) {
     if (keycode == action->trigger) {
         _update_oneshot_trigger(action, record);
     } else {
         _update_oneshot_no_trigger(action, keycode, record);
     }
-    return true;
 }

@@ -1,6 +1,5 @@
 #pragma once
-
-#ifdef CALLUM_OS
+#include "txkyel.h"
 
 // Represents the four states a oneshot key can be in
 typedef enum {
@@ -24,7 +23,7 @@ typedef struct {
  * If a mod is used while it is held it will be unregistered on keyup as normal, 
  * otherwise it will be queued and only released after the next non-mod keyup.
  */
-bool update_oneshot(oneshot_action_t *action, uint16_t keycode, keyrecord_t *record);
+void update_oneshot(oneshot_action_t *action, uint16_t keycode, keyrecord_t *record);
 
 /**
  * Initialization process for Callum oneshot keys.
@@ -37,9 +36,3 @@ bool is_oneshot_cancel_key(uint16_t keycode);
 bool is_oneshot_ignored_key(uint16_t keycode);
 
 extern oneshot_action_t oneshot_actions[];
-
-#else
-
-#    define OS(mod, trigger) KC_NO
-
-#endif
