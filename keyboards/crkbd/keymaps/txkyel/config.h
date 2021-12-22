@@ -41,9 +41,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Rotate mouse
 #ifdef PS2_MOUSE_ENABLE
-#    define PS2_MOUSE_ROTATE 90
+#    define PS2_MOUSE_ROTATE 270
 #    define MH_AUTO_BUTTONS_TIMEOUT 750
 #    define PS2_MOUSE_SCROLL_BTN_MASK (1 << PS2_MOUSE_BTN_MIDDLE)
+#    define PS2_MOUSE_SCROLL_BTN_SEND TAPPING_TERM
+#    define PS2_MOUSE_SCROLL_DIVISOR_V 3
+#    define PS2_MOUSE_SCROLL_DIVISOR_H PS2_MOUSE_SCROLL_DIVISOR_V
 #endif
 
 #if defined(PS2_USE_BUSYWAIT) + defined(PS2_USE_INT) > 1

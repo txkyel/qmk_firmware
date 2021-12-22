@@ -7,7 +7,6 @@ LTO_ENABLE          = yes
 # PS2_USE_BUSYWAIT    = yes
 # PS2_USE_INT         = yes
 # MOUSEKEY_ENABLE     = yes
-# MH_AUTO_BUTTONS     = yes
 
 TAP_DANCE_ENABLE    = yes
 CALLUM_OS           = yes
