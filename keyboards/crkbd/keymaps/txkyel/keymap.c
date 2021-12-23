@@ -166,7 +166,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(MBTN);
                 mh_auto_buttons_timer = 0;
             }
-            return true;
+            return false;
         default:
             return true; // Process all other keycodes normally
     }
